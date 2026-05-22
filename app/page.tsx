@@ -213,6 +213,19 @@ export default function Home() {
             duration-500
             "
           >
+
+            <div  
+            className="
+            absolute
+            inset-0
+            opacity-0
+            group-hover:opacity-100
+            transition
+            duration-700
+            bg-gradient-to-br
+            from-white/5
+            to-transparent  
+            "/>
           
             <div className="text-5xl mb-4">🏷️</div>
 
@@ -228,8 +241,24 @@ export default function Home() {
               Difficulty: ★☆☆
             </p>
 
-          </Link>
+            <p
+            className="
+            mt-5
+            text-xs
+            text-[#F7CAC9]
+            opacity-0
+            translate-y-2
+            group-hover:opacity-100
+            group-hover:translate-y-0
+            transition-all
+            duration-500
+            italic
+            "
+          >
+            ⚠ Warning: Names may take 3-5 business days to memorize.
+          </p>
 
+          </Link>
 
           <Link
             href="/episodes"
@@ -252,6 +281,18 @@ export default function Home() {
             duration-500
             " 
           >
+            <div  
+            className="
+            absolute
+            inset-0
+            opacity-0
+            group-hover:opacity-100
+            transition
+            duration-700
+            bg-gradient-to-br
+            from-white/5
+            to-transparent  
+            "/>
 
             <div className="text-5xl mb-4">🔎</div>
 
@@ -266,6 +307,23 @@ export default function Home() {
             <p className="mt-5 text-sm opacity-70">
               Difficulty: ★★★
             </p>
+
+            <p
+            className="
+            mt-5
+            text-xs
+            text-[#91A8D0]
+            opacity-0
+            translate-y-2
+            group-hover:opacity-100 
+            group-hover:translate-y-0
+            transition-all
+            duration-500
+            italic
+            "
+          >
+            ⚠ Side effect: You may accidentally watch 47 episodes in a day.
+          </p>
 
           </Link>
 
@@ -291,6 +349,18 @@ export default function Home() {
             duration-500
             "
           >
+            <div  
+            className="
+            absolute
+            inset-0
+            opacity-0
+            group-hover:opacity-100
+            transition
+            duration-700
+            bg-gradient-to-br
+            from-white/5
+            to-transparent  
+            "/>
 
             <div className="text-5xl mb-4">💥</div>
 
@@ -305,6 +375,23 @@ export default function Home() {
             <p className="mt-5 text-sm opacity-70">
               Difficulty: ☠️☠️☠️
             </p>
+
+            <p
+            className="
+            mt-5
+            text-xs
+            text-purple-300
+            opacity-0
+            translate-y-2
+            group-hover:opacity-100
+            group-hover:translate-y-0
+            transition-all
+            duration-500
+            italic
+            "
+          >
+            ☠ Last known survivors: none confirmed.
+          </p>
 
           </Link>
 
