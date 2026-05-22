@@ -26,23 +26,22 @@ export default function MembersPage() {
           <Link
               href="/"
               className="
-              inline-flex
-              items-center
-              gap-3
-              px-6
-              py-3
+              inline-block
+              mb-8
+              px-5
+              py-2
               rounded-full
               bg-[#11111a]
-              border border-[#F7CAC9]/40
+              border
+              border-[#F7CAC9]/30
+              text-[#F7CAC9]
               hover:scale-105
-              hover:border-[#F7CAC9]
+              hover:bg-[#F7CAC9]
+              hover:text-black
               transition
-              shadow-[0_0_20px_rgba(247,202,201,0.2)]
               "
             >
-
-                💎 Return to Headquarters
-
+              ← Return to Survival HQ
             </Link>
 
         </div>
@@ -170,10 +169,6 @@ export default function MembersPage() {
             <p>
               DK ↔ Wonwoo 😭
             </p>
-            
-            <p>
-              Jun ↔ The8 😭
-            </p>
 
             <p className="italic text-gray-400 mt-4">
               Don't panic. This is a beginner rite of passage.
@@ -211,7 +206,7 @@ export default function MembersPage() {
             </h2>
             
             <p className="text-gray-400">
-              Leader • Hip-Hop Team Leader
+              General Leader • Hip-Hop Team Leader
             </p>
             
             <p className="mt-4 mb-6 text-sm text-[#91A8D0]">
@@ -222,8 +217,9 @@ export default function MembersPage() {
 
           <p className="mt-6 text-center">
             Responsible for managing twelve wonderful humans.
-            Success rate still under investigation 🧐
-            
+          </p>
+
+          <p className="mt-6 text-center">
             Daily emotional damage expected😭
           </p>
 
@@ -289,6 +285,9 @@ export default function MembersPage() {
 
           <p className="mt-6 text-center">
             Looks like an angel.
+          </p>
+
+          <p className="mt-6 text-center">
             Could actually kill you 😭            
           </p>
 
@@ -354,7 +353,13 @@ export default function MembersPage() {
 
           <p className="mt-6 text-center">
             Calm. Gentle. Sweet.
-            Hidden chaos may activate unexpectedly 😭
+          </p>
+
+          <p className="mt-6 text-center">
+            Hidden chaos may activate unexpectedly!!
+          </p>
+
+          <p className="mt-6 text-center">
             Never trust him around water.         
           </p>
 
@@ -420,6 +425,9 @@ export default function MembersPage() {
 
           <p className="mt-6 text-center">
             Mysterious. Unexpected.
+          </p>
+
+          <p className="mt-6 text-center">
             Nobody truly knows what goes on in his mind 😭            
           </p>
 
@@ -485,6 +493,9 @@ export default function MembersPage() {
 
           <p className="mt-6 text-center">
             Claims tiger status daily.
+          </p>
+
+          <p className="mt-6 text-center">
             Scientific evidence still under review 😭            
           </p>
 
@@ -550,6 +561,9 @@ export default function MembersPage() {
 
           <p className="mt-6 text-center">
             Quiet on the outside.
+          </p>
+
+          <p className="mt-6 text-center">
             Internal thoughts remain classified 😭          
           </p>
 
@@ -615,7 +629,7 @@ export default function MembersPage() {
 
           <p className="mt-6 text-center">
             Small in size.
-            Massive in musical damage😭            
+            Massive in musical factory output.           
           </p>
 
           <p className="mt-6 text-center">
@@ -680,6 +694,9 @@ export default function MembersPage() {
 
           <p className="mt-6 text-center">
             Human sunshine detected.
+          </p>
+
+          <p className="mt-6 text-center">
             Volume control still unavailable 😭            
           </p>
 
@@ -745,6 +762,9 @@ export default function MembersPage() {
 
           <p className="mt-6 text-center">
             Can cook. Can clean.
+          </p>
+
+          <p className="mt-6 text-center">
             Still somehow becomes the victim 😭            
           </p>
 
@@ -875,6 +895,9 @@ export default function MembersPage() {
 
           <p className="mt-6 text-center">
             Human reaction machine detected.
+          </p>
+
+          <p className="mt-6 text-center">
             Silence has never been confirmed 😭            
           </p>
 
@@ -940,6 +963,9 @@ export default function MembersPage() {
 
           <p className="mt-6 text-center">
             Physically present.
+          </p>
+
+          <p className="mt-6 text-center">
             Mentally buffering somewhere else 😭            
           </p>
 
@@ -1005,6 +1031,9 @@ export default function MembersPage() {
 
           <p className="mt-6 text-center">
             Youngest member detected.
+          </p>
+          
+          <p className="mt-6 text-center">
             Maknae behavior remains optional😭            
           </p>
 

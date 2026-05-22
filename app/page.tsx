@@ -196,15 +196,21 @@ export default function Home() {
             href="/members"
             className="
             group
+            relative
+            overflow-hidden
             rounded-[30px]
             p-8
             bg-[#11111a]/80
             border border-[#F7CAC9]/30
-            hover:scale-105
-            hover:border-[#F7CAC9]
-            transition
             backdrop-blur-md
             shadow-[0_0_25px_rgba(247,202,201,0.15)]
+
+            hover:scale-105
+            hover:-translate-y-2
+            hover:border-[#F7CAC9]
+
+            transition-all
+            duration-500
             "
           >
           
@@ -229,15 +235,21 @@ export default function Home() {
             href="/episodes"
             className="
             group
+            relative
+            overflow-hidden
             rounded-[30px]
             p-8
             bg-[#11111a]/80
-            border border-[#91A8D0]/30
-            hover:scale-105
-            hover:border-[#91A8D0]
-            transition
+            border border-[#F7CAC9]/30
             backdrop-blur-md
-            shadow-[0_0_25px_rgba(145,168,208,0.15)]
+            shadow-[0_0_25px_rgba(247,202,201,0.15)]
+
+            hover:scale-105
+            hover:-translate-y-2
+            hover:border-[#F7CAC9]
+
+            transition-all
+            duration-500
             " 
           >
 
@@ -262,15 +274,21 @@ export default function Home() {
             href="/chaos-zone"
             className="
             group
+            relative
+            overflow-hidden
             rounded-[30px]
             p-8
             bg-[#11111a]/80
-            border border-purple-400/30
-            hover:scale-105
-            hover:border-purple-400
-            transition
+            border border-[#F7CAC9]/30
             backdrop-blur-md
-            shadow-[0_0_25px_rgba(168,85,247,0.2)]
+            shadow-[0_0_25px_rgba(247,202,201,0.15)]
+
+            hover:scale-105
+            hover:-translate-y-2
+            hover:border-[#F7CAC9]
+
+            transition-all
+            duration-500
             "
           >
 

@@ -4,25 +4,24 @@ export default function ChaosPage() {
     <main className="min-h-screen bg-black text-white p-10">
         <div className="mb-10">
             <Link
-                href="/"
-                className="
-                inline-flex
-                items-center
-                gap-3
-                px-6
-                py-3
-                rounded-full
-                bg-[#11111a]
-                border border-[#F7CAC9]/40
-                hover:scale-105
-                hover:border-[#F7CAC9]
-                transition
-                shadow-[0_0_20px_rgba(247,202,201,0.2)]
-                "
+              href="/"
+              className="
+              inline-block
+              mb-8
+              px-5
+              py-2
+              rounded-full
+              bg-[#11111a]
+              border
+              border-[#F7CAC9]/30
+              text-[#F7CAC9]
+              hover:scale-105
+              hover:bg-[#F7CAC9]
+              hover:text-black
+              transition
+              "
             >
-
-                💎 Return to Headquarters
-
+              ← Return to Survival HQ
             </Link>
 
         </div>
