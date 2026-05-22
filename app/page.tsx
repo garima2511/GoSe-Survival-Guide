@@ -190,8 +190,9 @@ export default function Home() {
           New fan? Veteran Carat? Choose wisely🧙🔮🥕.
         </p>
         
-        <div className="mt-10 grid md:grid-cols-3 gap-6">
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
 
+        {/*Members Card*/}
           <Link
             href="/members"
             className="
@@ -260,6 +261,8 @@ export default function Home() {
 
           </Link>
 
+          {/*Episodes Card*/}
+
           <Link
             href="/episodes"
             className="
@@ -327,6 +330,7 @@ export default function Home() {
 
           </Link>
 
+          {/*Chaos Zone*/}
 
           <Link
             href="/chaos-zone"
@@ -349,6 +353,7 @@ export default function Home() {
             duration-500
             "
           >
+
             <div  
             className="
             absolute
@@ -394,6 +399,77 @@ export default function Home() {
           </p>
 
           </Link>
+
+          {/*Music Card*/}
+
+          <Link
+            href="/music"
+            className="
+            group
+            relative
+            overflow-hidden
+            rounded-[30px]
+            p-8
+            bg-[#11111a]/80
+            border border-[#F7CAC9]/30
+            backdrop-blur-md
+            shadow-[0_0_25px_rgba(247,202,201,0.15)]
+
+            hover:scale-105
+            hover:-translate-y-2
+            hover:border-[#F7CAC9]
+
+            transition-all
+            duration-500
+            "
+          >
+
+            <div  
+            className="
+            absolute
+            inset-0
+            opacity-0
+            group-hover:opacity-100
+            transition
+            duration-700
+            bg-gradient-to-br
+            from-white/5
+            to-transparent  
+            "/>
+
+            <div className="text-5xl mb-4">💥</div>
+
+            <h3 className="text-2xl font-bold text-purple-300">
+              🎵 Music Survival Guide
+            </h3>
+
+            <p className="mt-3 text-gray-400">
+              New CARAT detected? Start emotional damage here.
+            </p>
+
+            <p className="mt-5 text-sm opacity-70">
+              Difficulty: 💗💗💗
+            </p>
+
+            <p
+            className="
+            mt-5
+            text-xs
+            text-purple-300
+            opacity-0
+            translate-y-2
+            group-hover:opacity-100
+            group-hover:translate-y-0
+            transition-all
+            duration-500
+            italic
+            "
+          >
+            ⚠ You may suddenly develop 17 favorite songs.
+          </p>
+
+          </Link>
+
 
         </div>
 
