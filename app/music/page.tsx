@@ -24,75 +24,74 @@ export default function MusicPage() {
               ← Return to Survival HQ
             </Link>
 
-          </div>
+        </div>
 
         {/* Background Effects */}
     
-    <div className="absolute inset-0 overflow-hidden z-0 pointer-events-none">
+        <div className="absolute inset-0 overflow-hidden z-0 pointer-events-none">
+            
+            <div className="
+            absolute
+            top-[100px]
+            left-[100px]
+            w-[350px]
+            h-[350px]
+            rounded-full
+            bg-[#F7CAC9]/20
+            blur-[120px]
+            "/>
+            
+            <div className="
+            absolute
+            bottom-[120px]
+            right-[80px]
+            w-[400px]
+            h-[400px]
+            rounded-full
+            bg-[#91A8D0]/20
+            blur-[120px]
+            "/>
 
-      <div className="
-        absolute
-        top-[100px]
-        left-[100px]
-        w-[350px]
-        h-[350px]
-        rounded-full
-        bg-[#F7CAC9]/20
-        blur-[120px]
-      "/>
+            <div className="
+            absolute
+            top-[40%]
+            left-[45%]
+            w-[250px]
+            h-[250px]
+            rounded-full
+            bg-purple-500/10
+            blur-[100px]
+            "/>
 
-      <div className="
-        absolute
-        bottom-[120px]
-        right-[80px]
-        w-[400px]
-        h-[400px]
-        rounded-full
-        bg-[#91A8D0]/20
-        blur-[120px]
-      "/>
+            <div className="absolute top-20 left-10 text-5xl opacity-10">
+                💎
+            </div>
 
-      <div className="
-        absolute
-        top-[40%]
-        left-[45%]
-        w-[250px]
-        h-[250px]
-        rounded-full
-        bg-purple-500/10
-        blur-[100px]
-      "/>
+            <div className="absolute top-[25%] right-[10%] text-6xl opacity-10">
+                🍒
+            </div>
 
-      <div className="absolute top-20 left-10 text-5xl opacity-10">
-        💎
-      </div>
+            <div className="absolute bottom-[25%] left-[15%] text-6xl opacity-10">
+                🐯
+            </div>
 
-      <div className="absolute top-[25%] right-[10%] text-6xl opacity-10">
-        🍒
-      </div>
+            <div className="absolute bottom-20 right-[20%] text-5xl opacity-10">
+                🍊
+            </div>
 
-      <div className="absolute bottom-[25%] left-[15%] text-6xl opacity-10">
-        🐯
-      </div>
+            <div className="absolute top-[70%] left-[50%] text-5xl opacity-10">
+                💎
+            </div>
 
-      <div className="absolute bottom-20 right-[20%] text-5xl opacity-10">
-        🍊
-      </div>
+        </div>
+        
+        <h1 className="text-5xl text-center font-bold">
+            🎵 Music Survival Guide
+        </h1>
 
-      <div className="absolute top-[70%] left-[50%] text-5xl opacity-10">
-        💎
-      </div>
-
-    </div>
-
-
-      <h1 className="text-5xl text-center font-bold">
-        🔎 Listen Seventeen's Music
-      </h1>
-
-      <p className="text-center text-gray-400 mt-4">
-        Ready for "Slipping into the diamond life" 💎
-      </p>
+        <p className="text-center text-gray-400 mt-4">
+            Ready for "Slipping into the diamond life" 💎
+        </p>
 
     </main>
   );

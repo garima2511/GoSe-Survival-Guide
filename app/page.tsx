@@ -181,10 +181,26 @@ export default function Home() {
       </div>
 
       <section className="mt-20 text-center">
+        
+        <div className="relative inline-block">
+          
+          <h2 className="text-4xl font-bold text-[#91A8D0] relative z-10">
+            Choose your survival path
+          </h2>
+          
+          <div
+          className="
+          absolute
+          inset-x-0
+          -bottom-2
+          h-6
+          bg-[#91A8D0]/20
+          blur-xl
+          rounded-full
+          "
+          />
 
-        <h2 className="text-4xl font-bold text-[#91A8D0]">
-          Choose your survival path
-        </h2>
+        </div>
 
         <p className="text-gray-400 mt-3">
           New fan? Veteran Carat? Choose wisely🧙🔮🥕.
@@ -200,7 +216,13 @@ export default function Home() {
             relative
             overflow-hidden
             rounded-[30px]
-            p-8
+            p-6
+            min-h-[260px]
+            flex
+            flex-col
+            justify-center
+            items-center
+            text-center
             bg-[#11111a]/80
             border border-[#F7CAC9]/30
             backdrop-blur-md
@@ -270,7 +292,13 @@ export default function Home() {
             relative
             overflow-hidden
             rounded-[30px]
-            p-8
+            p-6
+            min-h-[260px]
+            flex
+            flex-col
+            justify-center
+            items-center
+            text-center
             bg-[#11111a]/80
             border border-[#F7CAC9]/30
             backdrop-blur-md
@@ -339,7 +367,13 @@ export default function Home() {
             relative
             overflow-hidden
             rounded-[30px]
-            p-8
+            p-6
+            min-h-[260px]
+            flex
+            flex-col
+            justify-center
+            items-center
+            text-center
             bg-[#11111a]/80
             border border-[#F7CAC9]/30
             backdrop-blur-md
@@ -409,7 +443,13 @@ export default function Home() {
             relative
             overflow-hidden
             rounded-[30px]
-            p-8
+            p-6
+            min-h-[260px]
+            flex
+            flex-col
+            justify-center
+            items-center
+            text-center
             bg-[#11111a]/80
             border border-[#F7CAC9]/30
             backdrop-blur-md
@@ -485,7 +525,7 @@ export default function Home() {
 
           <p>Say the name, SEVENTEEN</p>
 
-          <p>CARAT APPROVED</p>
+          <p>MISS NEUPANE APPROVED</p>
 
         </div>
 
