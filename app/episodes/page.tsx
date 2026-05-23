@@ -19,7 +19,7 @@ export default function EpisodesPage() {
       .toLowerCase()
       .includes(search.toLowerCase());
       
-      return matchesGenre && matchesSearch;
+    return matchesGenre && matchesSearch;
   });
 
   return (
@@ -121,7 +121,7 @@ export default function EpisodesPage() {
 
     </div>
 
-      <div className="relative z-10">
+    <div className="relative z-10">
 
 
       <h1 className="text-5xl text-center font-bold">
@@ -194,17 +194,20 @@ export default function EpisodesPage() {
         
       </section>
 
-      <div className="mt-10 flex justify-center">
+      <div className="mt-10 flex justify-center relative">
+        <div className="absolute left-[calc(50%-190px)] top-1/2 -translate-y-1/2 text-gray-500">
+          🔍
+        </div>
         
         <input
         type="text"
-        placeholder="Search episodes..."
+        placeholder="Search episodes, chaos, TTT..."
         value={search}
         onChange={(e)=>setSearch(e.target.value)}
         className="
         w-full
         max-w-md
-        px-6
+        pl-14 pr-6
         py-3
         rounded-full
         bg-[#11111a]
@@ -221,6 +224,26 @@ export default function EpisodesPage() {
       <p className="text-center mt-8 text-gray-400">
         Showing {filteredEpisodes.length} survival missions
       </p>
+
+      <p className="text-center mt-3 text-[#F7CAC9] italic">
+        Currently viewing: {selectedGenre}
+      </p>
+
+      {filteredEpisodes.length === 0 ? (
+        
+        <div className="text-center mt-20">
+          
+          <h2 className="text-3xl text-[#F7CAC9]">
+            No survival missions found 😭
+          </h2>
+          
+          <p className="text-gray-400 mt-4">
+            Try another keyword or chaos type.
+          </p>
+
+        </div>
+
+      ) : (
 
       <div className="mt-20 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         
@@ -288,8 +311,9 @@ export default function EpisodesPage() {
         ))}
 
       </div>
+    )}
       
-      </div>
+    </div>
     </main>
   );
 }
