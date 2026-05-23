@@ -1,52 +1,27 @@
+"use client";
+
 import Link from "next/link";
-const episodes = [
-  {
-    title: "Don't Lie I",
-    year: "2019",
-    category: "Strategy",
-    description:
-      "Mafia game episode. Trust nobody. Absolutely nobody 😭",
-    emoji: "🕵️",
-  },
-
-  {
-    title: "TTT Hyperrealism",
-    year: "2020",
-    category: "Healing",
-    description:
-      "Food, drinks, healing... and then chaos happens.",
-    emoji: "🍻",
-  },
-
-  {
-    title: "Debate Night",
-    year: "2020",
-    category: "Chaos",
-    description:
-      "Watching arguments somehow become comedy 😭",
-    emoji: "🎤",
-  },
-
-  {
-    title: "The Tag",
-    year: "2019",
-    category: "Horror",
-    description:
-      "You laugh and panic at the same time.",
-    emoji: "👻",
-  },
-
-  {
-    title: "Kickball",
-    year: "2022",
-    category: "Physical",
-    description:
-      "Athletic competition + suffering.",
-    emoji: "⚽",
-  },
-];
+import { useState } from "react";
+import { episodes } from "../data/episodes";
 
 export default function EpisodesPage() {
+
+  const [selectedGenre, setSelectedGenre] = useState("All");
+  const [search, setSearch] = useState("");
+  
+  const filteredEpisodes = episodes.filter((episode) => {
+  const matchesGenre =
+    selectedGenre === "All" ||
+    episode.category === selectedGenre;
+
+  const matchesSearch =
+    episode.title
+      .toLowerCase()
+      .includes(search.toLowerCase());
+      
+      return matchesGenre && matchesSearch;
+  });
+
   return (
     <main
     className="
@@ -157,9 +132,99 @@ export default function EpisodesPage() {
         Welcome to betrayal, games and suspicious behavior 😭
       </p>
 
-      <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* Genre Section */}
+
+      <section className="mt-16 text-center">
         
-        {episodes.map((episode) => (
+        <h2 className="text-3xl font-bold text-[#91A8D0]">
+          Choose your chaos type
+        </h2>
+        
+        <p className="text-gray-400 mt-3 italic">
+          Different missions. Different emotional damage.
+        </p>
+
+        {/*Genre Tags*/}
+        
+        <div className="mt-10 grid grid-cols-2 md:grid-cols-6 gap-4">
+          
+          <button
+          onClick={() => setSelectedGenre("All")}
+          className="rounded-full p-4 bg-[#11111a] border border-white/20 hover:scale-105 transition"
+          >
+            ✨ All
+          </button>
+          
+          <button
+          onClick={() => setSelectedGenre("Strategy")}
+          className="rounded-full p-4 bg-[#11111a] border border-[#F7CAC9]/30 hover:scale-105 transition"
+          >
+            🧠 Strategy
+          </button>
+          
+          <button
+          onClick={() => setSelectedGenre("Chaos")}
+          className="rounded-full p-4 bg-[#11111a] border border-red-400/30 hover:scale-105 transition"
+          >
+            🔥 Chaos
+          </button>
+          
+          <button
+          onClick={() => setSelectedGenre("Healing")}
+          className="rounded-full p-4 bg-[#11111a] border border-green-400/30 hover:scale-105 transition"
+          >
+            🌿 Healing
+          </button>
+          
+          <button
+          onClick={() => setSelectedGenre("Horror")}
+          className="rounded-full p-4 bg-[#11111a] border border-purple-400/30 hover:scale-105 transition"
+          >
+            👁 Horror
+          </button>
+          
+          <button
+          onClick={() => setSelectedGenre("Physical")}
+          className="rounded-full p-4 bg-[#11111a] border border-blue-400/30 hover:scale-105 transition"
+          >
+            ⚡ Physical
+          </button>
+          
+        </div>
+        
+      </section>
+
+      <div className="mt-10 flex justify-center">
+        
+        <input
+        type="text"
+        placeholder="Search episodes..."
+        value={search}
+        onChange={(e)=>setSearch(e.target.value)}
+        className="
+        w-full
+        max-w-md
+        px-6
+        py-3
+        rounded-full
+        bg-[#11111a]
+        border
+        border-[#91A8D0]/30
+        text-white
+        outline-none
+        focus:border-[#F7CAC9]
+        "
+        />
+
+      </div>
+
+      <p className="text-center mt-8 text-gray-400">
+        Showing {filteredEpisodes.length} survival missions
+      </p>
+
+      <div className="mt-20 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        {filteredEpisodes.map((episode) => (
           
           <div
           key={episode.title}
@@ -192,51 +257,37 @@ export default function EpisodesPage() {
               {episode.description}
             </p>
 
+            <p className="mt-5 text-sm text-[#F7CAC9]">
+              Survival Level: {episode.difficulty}
+            </p>
+
+            <a
+              href={episode.youtube}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+              inline-block
+              mt-5
+              px-5
+              py-2
+              rounded-full
+              bg-gradient-to-r
+              from-[#F7CAC9]
+              to-[#91A8D0]
+              text-black
+              font-semibold
+              hover:scale-105
+              transition
+              "
+              >
+                ▶ Watch Episode
+            </a>
+
           </div>
 
         ))}
 
       </div>
-
-      {/* Genre Section */}
-
-      <section className="mt-16 text-center">
-        
-        <h2 className="text-3xl font-bold text-[#91A8D0]">
-          Choose your chaos type
-        </h2>
-        
-        <p className="text-gray-400 mt-3 italic">
-          Different missions. Different emotional damage.
-        </p>
-
-        {/*Genre Tags*/}
-        
-        <div className="mt-10 grid grid-cols-2 md:grid-cols-5 gap-4">
-          
-          <div className="rounded-full p-4 bg-[#11111a] border border-[#F7CAC9]/30 hover:scale-105 transition">
-            🧠 Strategy
-          </div>
-          
-          <div className="rounded-full p-4 bg-[#11111a] border border-red-400/30 hover:scale-105 transition">
-            🔥 Chaos
-          </div>
-
-          <div className="rounded-full p-4 bg-[#11111a] border border-green-400/30 hover:scale-105 transition">
-            🌿 Healing
-          </div>
-
-          <div className="rounded-full p-4 bg-[#11111a] border border-purple-400/30 hover:scale-105 transition">
-            👁 Horror
-          </div>
-
-          <div className="rounded-full p-4 bg-[#11111a] border border-blue-400/30 hover:scale-105 transition">
-            ⚡ Physical
-          </div>
-
-        </div>
-
-      </section>
       
       </div>
     </main>
