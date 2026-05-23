@@ -22,6 +22,8 @@ Style:
 - Add survival tips
 - Add chaos zone
 - Add comeback eras
+- Add notes section where fans can write what they feel about the website and can express there feelings
+
 
 ## Developer Notes
 
