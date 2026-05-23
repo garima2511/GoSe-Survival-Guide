@@ -219,6 +219,23 @@ export default function EpisodesPage() {
         "
         />
 
+        {search && (
+          <button 
+          onClick={() => setSearch("")}
+          className="
+          absolute
+          right-[calc(50%-190px)]
+          top-1/2
+          -translate-y-1/2
+          text-gray-400
+          hover:text-[#F7CAC9]
+          transition
+          "
+          >
+            ✕
+          </button>
+        )}
+
       </div>
 
       <p className="text-center mt-8 text-gray-400">
