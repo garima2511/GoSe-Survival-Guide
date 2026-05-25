@@ -246,6 +246,46 @@ export default function EpisodesPage() {
         Currently viewing: {selectedGenre}
       </p>
 
+      <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4">
+        
+        <div className="rounded-2xl bg-[#11111a]/80 p-5 border border-[#F7CAC9]/20">
+        
+        <p className="text-gray-400 text-sm">Total Episodes</p>
+        
+        <h3 className="text-3xl font-bold text-[#F7CAC9]">
+          {episodes.length}
+        </h3>
+        </div>
+        
+        <div className="rounded-2xl bg-[#11111a]/80 p-5 border border-red-400/20">
+        
+        <p className="text-gray-400 text-sm">Chaos Level</p>
+        
+        <h3 className="text-3xl font-bold text-red-300">
+          ∞
+        </h3>
+        </div>
+
+        <div className="rounded-2xl bg-[#11111a]/80 p-5 border border-[#91A8D0]/20">
+        
+        <p className="text-gray-400 text-sm">Current Filter</p>
+        
+        <h3 className="text-2xl font-bold text-[#91A8D0]">
+          {selectedGenre}
+        </h3>
+        </div>
+
+        <div className="rounded-2xl bg-[#11111a]/80 p-5 border border-green-400/20">
+    
+        <p className="text-gray-400 text-sm">Survival Missions</p>
+    
+        <h3 className="text-3xl font-bold text-green-300">
+          {filteredEpisodes.length}
+        </h3>
+        </div>
+
+      </div>
+
       {filteredEpisodes.length === 0 ? (
         
         <div className="text-center mt-20">

@@ -1,3 +1,5 @@
+
+
 export const episodes = [
   {
     id: 1,
@@ -9,6 +11,9 @@ export const episodes = [
     emoji: "🕵️",
     youtube: "https://youtu.be/7-RbcrWTth4",
     difficulty: "★★★★★",
+
+    season: "GoSe 2019",
+    tags: ["Mafia", "Mind Games", "Suspicious", "Betrayal"]
   },
 
   {
@@ -21,6 +26,9 @@ export const episodes = [
     emoji: "🍻",
     youtube: "https://www.youtube.com/watch?v=OjbjlNbQqLc",
     difficulty: "★★☆☆☆",
+
+    season: "GoSe 2020",
+    tags: ["TTT", "Food", "Vacation", "Healing"]
   },
 
   {
@@ -33,6 +41,9 @@ export const episodes = [
     emoji: "🎤",
     youtube: "https://www.youtube.com/watch?v=PwsatXwPonc",
     difficulty: "★★★★☆",
+
+    season: "GoSe 2020",
+    tags: ["Debate", "Chaos", "Illogical", "Funny"]
   },
 
   {
@@ -45,6 +56,9 @@ export const episodes = [
     emoji: "👻",
     youtube: "https://www.youtube.com/watch?v=zKa-EGTpkRI",
     difficulty: "☠️☠️☠️",
+
+    season: "GoSe 2019",
+    tags: ["Horror", "Panic", "Scream"]
   },
 
   {
@@ -57,5 +71,8 @@ export const episodes = [
     emoji: "⚽",
     youtube: "https://www.youtube.com/watch?v=c4eNr-9So5Ac",
     difficulty: "★★★☆☆",
+
+    season: "GoSe 2022",
+    tags: ["Physical", "Competition"]
   },
 ];
