@@ -60,7 +60,7 @@ export default function EpisodesPage() {
               ← Return to Survival HQ
             </Link>
 
-          </div>
+        </div>
 
         {/* Background Effects */}
     
@@ -307,7 +307,7 @@ export default function EpisodesPage() {
         {filteredEpisodes.map((episode) => (
           
           <div
-          key={episode.title}
+          key={episode.id}
           className="
           rounded-[30px]
           p-6
@@ -321,13 +321,48 @@ export default function EpisodesPage() {
           "
           >
             
-            <div className="text-5xl">
-              {episode.emoji}
-            </div>
+            <div className="overflow-hidden rounded-2xl">
+              
+              <img
+                src={`https://img.youtube.com/vi/${episode.videoId}/hqdefault.jpg`}
+                alt={episode.title}
+                className="
+                w-full
+                h-48
+                object-cover
+                hover:scale-110
+                transition
+                duration-500
+                "
+                />
+              </div>
+
+              <div className="text-4xl mt-4">
+                {episode.emoji}
+              </div>
 
             <h2 className="mt-4 text-2xl font-bold text-[#F7CAC9]">
               {episode.title}
             </h2>
+
+            <p className="mt-2 text-sm text-[#F7CAC9] italic">
+              {episode.episodeNo}
+            </p>
+
+            <span
+              className="
+              inline-block
+              mt-3
+              px-3
+              py-1
+              rounded-full
+              bg-[#F7CAC9]/20
+              text-[#F7CAC9]
+              text-xs
+              "
+            >
+              EP #{episode.id}
+            </span>
 
             <p className="text-[#91A8D0] mt-2">
               {episode.category} • {episode.year}
@@ -339,6 +374,10 @@ export default function EpisodesPage() {
 
             <p className="mt-5 text-sm text-[#F7CAC9]">
               Survival Level: {episode.difficulty}
+            </p>
+
+            <p className="mt-2 text-sm text-gray-400">
+              Mission ID: #{episode.id}
             </p>
 
             <a
