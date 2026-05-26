@@ -306,103 +306,112 @@ export default function EpisodesPage() {
         
         {filteredEpisodes.map((episode) => (
           
-          <div
-          key={episode.id}
-          className="
-          rounded-[30px]
-          p-6
-          bg-[#11111a]/80
-          border border-[#91A8D0]/20
-          hover:scale-105
-          hover:border-[#91A8D0]
-          hover:shadow-[0_0_30px_rgba(145,168,208,0.25)]
-          transition
-          duration-300
-          "
-          >
+          <Link
+            href={`/episodes/${episode.id}`}
+            key={episode.id}
+            >
             
-            <div className="overflow-hidden rounded-2xl">
-              
-              <img
-                src={`https://img.youtube.com/vi/${episode.videoId}/hqdefault.jpg`}
-                alt={episode.title}
-                className="
-                w-full
-                h-48
-                object-cover
-                hover:scale-110
-                transition
-                duration-500
-                "
-                />
+            <div
+              className="
+              rounded-[30px]
+              p-6
+              bg-[#11111a]/80
+              border border-[#91A8D0]/20
+              hover:scale-105
+              hover:border-[#91A8D0]
+              hover:shadow-[0_0_30px_rgba(145,168,208,0.25)]
+              transition
+              duration-300
+              "
+            >
+              <div className="overflow-hidden rounded-2xl">
+                
+                <img
+                  src={`https://img.youtube.com/vi/${episode.videoId}/hqdefault.jpg`}
+                  alt={episode.title}
+                  className="
+                  w-full
+                  h-48
+                  object-cover
+                  hover:scale-110
+                  transition
+                  duration-500
+                  "
+                  />
               </div>
 
               <div className="text-4xl mt-4">
                 {episode.emoji}
               </div>
 
-            <h2 className="mt-4 text-2xl font-bold text-[#F7CAC9]">
-              {episode.title}
-            </h2>
+              <h2 className="mt-4 text-2xl font-bold text-[#F7CAC9]">
+                {episode.title}
+              </h2>
 
-            <p className="mt-2 text-sm text-[#F7CAC9] italic">
-              {episode.episodeNo}
-            </p>
+              <p className="mt-2 text-sm text-[#F7CAC9] italic">
+                {episode.episodeNo}
+              </p>
 
-            <span
-              className="
-              inline-block
-              mt-3
-              px-3
-              py-1
-              rounded-full
-              bg-[#F7CAC9]/20
-              text-[#F7CAC9]
-              text-xs
-              "
-            >
-              EP #{episode.id}
-            </span>
+              <span
+                className="
+                inline-block
+                mt-3
+                px-3
+                py-1
+                rounded-full
+                bg-[#F7CAC9]/20
+                text-[#F7CAC9]
+                text-xs
+                "
+                >
+                  EP #{episode.id}
+              </span>
 
-            <p className="text-[#91A8D0] mt-2">
-              {episode.category} • {episode.year}
-            </p>
+              <p className="text-[#91A8D0] mt-2">
+                {episode.category} • {episode.year}
+              </p>
 
-            <p className="mt-4 text-gray-400">
-              {episode.description}
-            </p>
+              <p className="mt-4 text-gray-400">
+                {episode.description}
+              </p>
 
-            <p className="mt-5 text-sm text-[#F7CAC9]">
-              Survival Level: {episode.difficulty}
-            </p>
+              <p className="mt-5 text-sm text-[#F7CAC9]">
+                Survival Level: {episode.difficulty}
+              </p>
 
-            <p className="mt-2 text-sm text-gray-400">
-              Mission ID: #{episode.id}
-            </p>
+              <p className="mt-2 text-sm text-gray-400">
+                Mission ID: #{episode.id}
+              </p>
 
-            <a
-              href={episode.youtube}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="
-              inline-block
-              mt-5
-              px-5
-              py-2
-              rounded-full
-              bg-gradient-to-r
-              from-[#F7CAC9]
-              to-[#91A8D0]
-              text-black
-              font-semibold
-              hover:scale-105
-              transition
-              "
-              >
-                ▶ Watch Episode
-            </a>
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open(
+                    episode.youtube,
+                    "_blank"
+                  );
+                }}
+                className="
+                inline-block
+                mt-5
+                px-5
+                py-2
+                rounded-full
+                bg-gradient-to-r
+                from-[#F7CAC9]
+                to-[#91A8D0]
+                text-black
+                font-semibold
+                hover:scale-105
+                transition
+                "
+                >
+                  ▶ Watch Episode
+              </button>
 
-          </div>
+            </div>
+
+          </Link>
 
         ))}
 

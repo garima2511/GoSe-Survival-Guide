@@ -477,14 +477,14 @@ export default function Home() {
             to-transparent  
             "/>
 
-            <div className="text-5xl mb-4">💥</div>
+            <div className="text-5xl mb-4">🎵</div>
 
             <h3 className="text-2xl font-bold text-purple-300">
-              🎵 Music Survival Guide
+              Music Survival Guide
             </h3>
 
             <p className="mt-3 text-gray-400">
-              New CARAT detected? Start emotional damage here.
+              New CARAT? Start emotional damage here.
             </p>
 
             <p className="mt-5 text-sm opacity-70">
