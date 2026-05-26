@@ -78,7 +78,7 @@ export const episodes = [
     title: "Kickball",
     year: "2022",
     episodeNo: "EP 48-49",
-    series: "Kickball",
+    series: "Sports",
     category: "Physical",
     description:
       "Athletic competition + suffering.",
