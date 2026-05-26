@@ -32,6 +32,12 @@ export default async function EpisodeDetail({
     );
   }
 
+  const relatedEpisodes = episodes.filter(
+    (ep) =>
+      ep.series === episode.series &&
+      ep.id !== episode.id
+  );
+
   return (
     <main
       className="
@@ -108,6 +114,45 @@ export default async function EpisodeDetail({
             </span>
 
           ))}
+
+        </div>
+
+        <div className="mt-16">
+
+          <h2
+            className="
+            text-3xl
+            font-bold
+            text-[#91A8D0]
+            "
+          >
+            Continue Survival Mission
+          </h2>
+
+          <div className="mt-6 flex flex-wrap gap-4">
+
+            {relatedEpisodes.map((ep) => (
+
+              <Link
+                key={ep.id}
+                href={`/episodes/${ep.id}`}
+                className="
+                px-5
+                py-3
+                rounded-full
+                bg-[#11111a]
+                border
+                border-[#F7CAC9]/20
+                hover:scale-105
+                transition
+                "
+              >
+                {ep.emoji} {ep.title}
+              </Link>
+
+            ))}
+
+          </div>
 
         </div>
 

@@ -6,6 +6,7 @@ export const episodes = [
     title: "Don't Lie I",
     year: "2019",
     episodeNo: "EP 21-22",
+    series: "Don't Lie",
     category: "Strategy",
     description:
       "Mafia game episode. Trust nobody. Absolutely nobody 😭",
@@ -23,6 +24,7 @@ export const episodes = [
     title: "TTT Hyperrealism",
     year: "2020",
     episodeNo: "EP 44-45",
+    series: "TTT",
     category: "Healing",
     description:
       "Food, drinks, healing... and then chaos happens.",
@@ -40,6 +42,7 @@ export const episodes = [
     title: "Debate Night",
     year: "2020",
     episodeNo: "EP 28-29",
+    series: "Debate Night",
     category: "Chaos",
     description:
       "Watching arguments somehow become comedy 😭",
@@ -57,6 +60,7 @@ export const episodes = [
     title: "The Tag",
     year: "2019",
     episodeNo: "EP 27-28",
+    series: "The Tag",
     category: "Horror",
     description:
       "You laugh and panic at the same time.",
@@ -74,6 +78,7 @@ export const episodes = [
     title: "Kickball",
     year: "2022",
     episodeNo: "EP 48-49",
+    series: "Kickball",
     category: "Physical",
     description:
       "Athletic competition + suffering.",
