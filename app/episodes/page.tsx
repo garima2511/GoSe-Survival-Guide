@@ -64,251 +64,253 @@ export default function EpisodesPage() {
 
         {/* Background Effects */}
     
-    <div className="absolute inset-0 overflow-hidden z-0 pointer-events-none">
+        <div className="absolute inset-0 overflow-hidden z-0 pointer-events-none">
 
-      <div className="
-        absolute
-        top-[100px]
-        left-[100px]
-        w-[350px]
-        h-[350px]
-        rounded-full
-        bg-[#F7CAC9]/20
-        blur-[120px]
-      "/>
+          <div className="
+            absolute
+            top-[100px]
+            left-[100px]
+            w-[350px]
+            h-[350px]
+            rounded-full
+            bg-[#F7CAC9]/20
+            blur-[120px]
+          "/>
 
-      <div className="
-        absolute
-        bottom-[120px]
-        right-[80px]
-        w-[400px]
-        h-[400px]
-        rounded-full
-        bg-[#91A8D0]/20
-        blur-[120px]
-      "/>
+          <div className="
+            absolute
+            bottom-[120px]
+            right-[80px]
+            w-[400px]
+            h-[400px]
+            rounded-full
+            bg-[#91A8D0]/20
+            blur-[120px]
+          "/>
 
-      <div className="
-        absolute
-        top-[40%]
-        left-[45%]
-        w-[250px]
-        h-[250px]
-        rounded-full
-        bg-purple-500/10
-        blur-[100px]
-      "/>
+          <div className="
+            absolute
+            top-[40%]
+            left-[45%]
+            w-[250px]
+            h-[250px]
+            rounded-full
+            bg-purple-500/10
+            blur-[100px]
+          "/>
 
-      <div className="absolute top-20 left-10 text-5xl opacity-10">
-        💎
-      </div>
+          <div className="absolute top-20 left-10 text-5xl opacity-10">
+            💎
+          </div>
 
-      <div className="absolute top-[25%] right-[10%] text-6xl opacity-10">
-        🍒
-      </div>
+          <div className="absolute top-[25%] right-[10%] text-6xl opacity-10">
+            🍒
+          </div>
 
-      <div className="absolute bottom-[25%] left-[15%] text-6xl opacity-10">
-        🐯
-      </div>
+          <div className="absolute bottom-[25%] left-[15%] text-6xl opacity-10">
+            🐯
+          </div>
 
-      <div className="absolute bottom-20 right-[20%] text-5xl opacity-10">
-        🍊
-      </div>
+          <div className="absolute bottom-20 right-[20%] text-5xl opacity-10">
+            🍊
+          </div>
 
-      <div className="absolute top-[70%] left-[50%] text-5xl opacity-10">
-        💎
-      </div>
+          <div className="absolute top-[70%] left-[50%] text-5xl opacity-10">
+            💎
+          </div>
 
-    </div>
-
-    <div className="relative z-10">
-
-
-      <h1 className="text-5xl text-center font-bold">
-        🔎 Explore GoSe Episodes
-      </h1>
-
-      <p className="text-center text-gray-400 mt-2">
-        Welcome to betrayal, games and suspicious behavior 😭
-      </p>
-
-      {/* Genre Section */}
-
-      <section className="mt-6 text-center">
-        
-        <h2 className="text-3xl font-bold text-[#91A8D0]">
-          Choose your chaos type
-        </h2>
-        
-        <p className="text-gray-400 mt-1 italic">
-          Different missions. Different emotional damage.
-        </p>
-
-        {/*Genre Tags*/}
-        
-        <div className="mt-4 grid grid-cols-2 md:grid-cols-6 gap-4 px-6 py-3">
-          
-          <button
-          onClick={() => setSelectedGenre("All")}
-          className="rounded-full p-4 bg-[#11111a] border border-white/20 hover:scale-105 transition"
-          >
-            ✨ All
-          </button>
-          
-          <button
-          onClick={() => setSelectedGenre("Strategy")}
-          className="rounded-full p-4 bg-[#11111a] border border-[#F7CAC9]/30 hover:scale-105 transition"
-          >
-            🧠 Strategy
-          </button>
-          
-          <button
-          onClick={() => setSelectedGenre("Chaos")}
-          className="rounded-full p-4 bg-[#11111a] border border-red-400/30 hover:scale-105 transition"
-          >
-            🔥 Chaos
-          </button>
-          
-          <button
-          onClick={() => setSelectedGenre("Healing")}
-          className="rounded-full p-4 bg-[#11111a] border border-green-400/30 hover:scale-105 transition"
-          >
-            🌿 Healing
-          </button>
-          
-          <button
-          onClick={() => setSelectedGenre("Horror")}
-          className="rounded-full p-4 bg-[#11111a] border border-purple-400/30 hover:scale-105 transition"
-          >
-            👁 Horror
-          </button>
-          
-          <button
-          onClick={() => setSelectedGenre("Physical")}
-          className="rounded-full p-4 bg-[#11111a] border border-blue-400/30 hover:scale-105 transition"
-          >
-            ⚡ Physical
-          </button>
-          
-        </div>
-        
-      </section>
-
-      <div className="mt-4 flex justify-center relative">
-        <div className="absolute left-[calc(50%-190px)] top-1/2 -translate-y-1/2 text-gray-500">
-          🔍
-        </div>
-        
-        <input
-        type="text"
-        placeholder="Search episodes, chaos, TTT..."
-        value={search}
-        onChange={(e)=>setSearch(e.target.value)}
-        className="
-        w-full
-        max-w-md
-        pl-14 pr-6
-        py-3
-        rounded-full
-        bg-[#11111a]
-        border
-        border-[#91A8D0]/30
-        text-white
-        outline-none
-        focus:border-[#F7CAC9]
-        "
-        />
-
-        {search && (
-          <button 
-          onClick={() => setSearch("")}
-          className="
-          absolute
-          right-[calc(50%-190px)]
-          top-1/2
-          -translate-y-1/2
-          text-gray-400
-          hover:text-[#F7CAC9]
-          transition
-          "
-          >
-            ✕
-          </button>
-        )}
-
-      </div>
-
-      <p className="text-center mt-4 text-gray-400">
-        Showing {filteredEpisodes.length} survival missions
-      </p>
-
-      <p className="text-center mt-2 text-[#F7CAC9] italic">
-        Currently viewing: {selectedGenre}
-      </p>
-
-      <div className="mt-7 grid grid-cols-2 md:grid-cols-4 gap-4">
-        
-        <div className="rounded-2xl bg-[#11111a]/80 p-5 border border-[#F7CAC9]/20">
-        
-        <p className="text-gray-400 text-sm">Total Episodes</p>
-        
-        <h3 className="text-3xl font-bold text-[#F7CAC9]">
-          {episodes.length}
-        </h3>
-        </div>
-        
-        <div className="rounded-2xl bg-[#11111a]/80 p-5 border border-red-400/20">
-        
-        <p className="text-gray-400 text-sm">Chaos Level</p>
-        
-        <h3 className="text-3xl font-bold text-red-300">
-          ∞
-        </h3>
         </div>
 
-        <div className="rounded-2xl bg-[#11111a]/80 p-5 border border-[#91A8D0]/20">
-        
-        <p className="text-gray-400 text-sm">Current Filter</p>
-        
-        <h3 className="text-2xl font-bold text-[#91A8D0]">
-          {selectedGenre}
-        </h3>
-        </div>
+        <div className="relative z-10">
 
-        <div className="rounded-2xl bg-[#11111a]/80 p-5 border border-green-400/20">
-    
-        <p className="text-gray-400 text-sm">Survival Missions</p>
-    
-        <h3 className="text-3xl font-bold text-green-300">
-          {filteredEpisodes.length}
-        </h3>
-        </div>
 
-      </div>
+          <h1 className="text-5xl md:text-6xl text-center font-bold">
+            🔎 Explore GoSe Episodes
+          </h1>
 
-      {filteredEpisodes.length === 0 ? (
-        
-        <div className="text-center mt-14">
-          
-          <h2 className="text-3xl text-[#F7CAC9]">
-            No survival missions found 😭
-          </h2>
-          
-          <p className="text-gray-400 mt-4">
-            Try another keyword or chaos type.
+          <p className="text-center text-gray-400 mt-2">
+            Welcome to betrayal, games and embarassment 😸
           </p>
 
-        </div>
+          {/* Genre Section */}
 
-      ) : (
-
-      <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <section className="mt-6 text-center">
         
-        {filteredEpisodes.map((episode) => (
+          <h2 className="text-3xl font-bold text-[#91A8D0]">
+            Choose your chaos type 
+          </h2>
+        
+          <p className="text-gray-400 mt-1 italic">
+            Different missions. Different emotional damage.
+          </p>
+
+          {/*Genre Tags*/}
+        
+          <div className="mt-4 grid grid-cols-2 md:grid-cols-6 gap-4 px-6 py-3">
           
-          <Link
-            href={`/episodes/${episode.id}`}
-            key={episode.id}
+            <button
+            onClick={() => setSelectedGenre("All")}
+            className="rounded-full p-4 bg-[#11111a] border border-white/20 hover:scale-105 transition"
+            >
+              ✨ All
+            </button>
+          
+            <button
+            onClick={() => setSelectedGenre("Strategy")}
+            className="rounded-full p-4 bg-[#11111a] border border-[#F7CAC9]/30 hover:scale-105 transition"
+            >
+              🧠 Strategy
+            </button>
+          
+            <button
+            onClick={() => setSelectedGenre("Chaos")}
+            className="rounded-full p-4 bg-[#11111a] border border-red-400/30 hover:scale-105 transition"
+            >
+              🔥 Chaos
+            </button>
+          
+            <button
+            onClick={() => setSelectedGenre("Healing")}
+            className="rounded-full p-4 bg-[#11111a] border border-green-400/30 hover:scale-105 transition"
+            >
+              🌿 Healing
+            </button>
+          
+            <button
+            onClick={() => setSelectedGenre("Horror")}
+            className="rounded-full p-4 bg-[#11111a] border border-purple-400/30 hover:scale-105 transition"
+            >
+              👁 Horror
+            </button>
+          
+            <button
+            onClick={() => setSelectedGenre("Physical")}
+            className="rounded-full p-4 bg-[#11111a] border border-blue-400/30 hover:scale-105 transition"
+            >
+              ⚡ Physical
+            </button>
+          
+          </div>
+        
+          </section>
+
+          <div className="mt-4 flex justify-center relative">
+            <div className="absolute left-[calc(50%-190px)] top-1/2 -translate-y-1/2 text-gray-500">
+             🔍
+            </div>
+        
+            <input
+            type="text"
+            placeholder="Search episodes, chaos, TTT..."
+            value={search}
+            onChange={(e)=>setSearch(e.target.value)}
+            className="
+            w-full
+            max-w-md
+            pl-14 pr-6
+            py-3
+            rounded-full
+            bg-[#11111a]
+            border
+            border-[#91A8D0]/30
+            text-white
+            outline-none
+            focus:border-[#F7CAC9]
+            "
+            />
+
+            {search && (
+            <button 
+            onClick={() => setSearch("")}
+            className="
+            absolute
+            right-[calc(50%-190px)]
+            top-1/2
+            -translate-y-1/2
+            text-gray-400
+            hover:text-[#F7CAC9]
+            transition
+            "
+            >
+              ✕
+            </button>
+            )}
+
+          </div>
+
+          <p className="text-center mt-4 text-gray-400">
+            Showing {filteredEpisodes.length} survival missions
+          </p>
+
+          <p className="text-center mt-2 text-[#F7CAC9] italic">
+            Currently viewing: {selectedGenre}
+          </p>
+
+          <div className="mt-7 grid grid-cols-2 md:grid-cols-4 gap-4">
+        
+            <div className="rounded-2xl bg-[#11111a]/80 p-5 border border-[#F7CAC9]/20">
+        
+            <p className="text-gray-400 text-sm">Total Episodes</p>
+        
+            <h3 className="text-3xl font-bold text-[#F7CAC9]">
+              {episodes.length}
+            </h3>
+            </div>
+        
+            <div className="rounded-2xl bg-[#11111a]/80 p-5 border border-red-400/20">
+        
+              <p className="text-gray-400 text-sm">Chaos Level</p>
+        
+              <h3 className="text-3xl font-bold text-red-300">
+                ∞
+              </h3>
+            </div>
+
+            <div className="rounded-2xl bg-[#11111a]/80 p-5 border border-[#91A8D0]/20">
+        
+              <p className="text-gray-400 text-sm">Current Filter</p>
+            
+              <h3 className="text-2xl font-bold text-[#91A8D0]">
+                {selectedGenre}
+              </h3>
+            
+            </div>
+
+            <div className="rounded-2xl bg-[#11111a]/80 p-5 border border-green-400/20">
+    
+              <p className="text-gray-400 text-sm">Survival Missions</p>
+    
+              <h3 className="text-3xl font-bold text-green-300">
+                {filteredEpisodes.length}
+              </h3>
+            
+            </div>
+
+          </div>
+
+          {filteredEpisodes.length === 0 ? (
+        
+            <div className="text-center mt-14">
+          
+            <h2 className="text-3xl text-[#F7CAC9]">
+              No survival missions found 😭
+            </h2>
+          
+            <p className="text-gray-400 mt-4">
+              Try another keyword or chaos type.
+            </p>
+
+            </div>
+
+          ) : (
+
+          <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+          {filteredEpisodes.map((episode) => (
+          
+            <Link
+              href={`/episodes/${episode.id}`}
+              key={episode.id}
             >
             
             <div

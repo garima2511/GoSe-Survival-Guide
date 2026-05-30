@@ -38,6 +38,14 @@ export default async function EpisodeDetail({
       ep.id !== episode.id
   );
 
+  const previousEpisode = episodes.find(
+    (ep) => ep.id === episode.id - 1
+  );
+
+  const nextEpisode = episodes.find(
+    (ep) => ep.id === episode.id + 1
+  );
+
   return (
     <main
       className="
@@ -125,6 +133,32 @@ export default async function EpisodeDetail({
           Survival Level: {episode.difficulty}
         </p>
 
+        <div
+        className="
+        mt-8
+        rounded-3xl
+        p-6
+        bg-[#11111a]/80
+        border
+        border-[#F7CAC9]/20
+        "
+        >
+          
+          <h2 className="text-2xl font-bold text-[#F7CAC9]">
+            ⚠ Survival Notes
+          </h2>
+          
+          <p className="mt-4 text-gray-300">
+            Enter this mission at your own risk.
+            Emotional damage may occur.
+          </p>
+
+          <p className="mt-3 text-gray-400 italic">
+            {episode.survivalNote}
+          </p>
+
+        </div>
+
         <div className="flex gap-3 flex-wrap mt-8">
 
           {episode.tags.map((tag) => (
@@ -183,6 +217,55 @@ export default async function EpisodeDetail({
             ))}
 
           </div>
+
+        </div>
+
+        <div className="mt-16 flex justify-between gap-4">
+
+          {previousEpisode ? (
+          
+            <Link
+            href={`/episodes/${previousEpisode.id}`}
+            className="
+            px-5
+            py-3
+            rounded-full
+            bg-[#11111a]
+            border
+            border-[#91A8D0]/20
+            hover:scale-105
+            transition
+            "
+            >
+              ← {previousEpisode.title}
+            </Link>
+          ) : (
+        
+            <div />
+          )}
+
+          {nextEpisode ? (
+        
+          <Link
+            href={`/episodes/${nextEpisode.id}`}
+            className="
+            px-5
+            py-3
+            rounded-full
+            bg-[#11111a]
+            border
+            border-[#F7CAC9]/20
+            hover:scale-105
+            transition
+            "
+            >
+            {nextEpisode.title} →
+          </Link>
+  
+          ) : (
+    
+            <div />
+          )}
 
         </div>
 

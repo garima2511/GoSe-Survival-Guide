@@ -11,6 +11,8 @@ export const episodes = [
     description:
       "Mafia game episode. Trust nobody. Absolutely nobody 😭",
     emoji: "🕵️",
+    survivalNote:
+      "Trust nobody. Not even the person who looks innocent.",
     youtube: "https://www.youtube.com/watch?v=7-RbcrWTth4",
     videoId: "7-RbcrWTth4",
     difficulty: "★★★★★",
@@ -29,6 +31,8 @@ export const episodes = [
     description:
       "Food, drinks, healing... and then chaos happens.",
     emoji: "🍻",
+    survivalNote:
+      "Looks like healing. Ends with chaos.",
     youtube: "https://www.youtube.com/watch?v=OjbjlNbQqLc",
     videoId: "OjbjlNbQqLc",
     difficulty: "★★☆☆☆",
@@ -47,6 +51,8 @@ export const episodes = [
     description:
       "Watching arguments somehow become comedy 😭",
     emoji: "🎤",
+    survivalNote:
+      "Logic may disappear without warning.",
     youtube: "https://www.youtube.com/watch?v=PwsatXwPonc",
     videoId: "PwsatXwPonc",
     difficulty: "★★★★☆",
@@ -65,6 +71,8 @@ export const episodes = [
     description:
       "You laugh and panic at the same time.",
     emoji: "👻",
+    survivalNote:
+      "Prepare headphones and emotional support.",
     youtube: "https://www.youtube.com/watch?v=zKa-EGTpkRI",
     videoId: "zKa-EGTpkRI",
     difficulty: "☠️☠️☠️",
@@ -83,6 +91,8 @@ export const episodes = [
     description:
       "Athletic competition + suffering.",
     emoji: "⚽",
+    survivalNote:
+      "Athletes were created. Dignity was lost.",
     videoId: "c4eNr-9So5A",
     youtube: "https://www.youtube.com/watch?v=c4eNr-9So5A",
     difficulty: "★★★☆☆",
