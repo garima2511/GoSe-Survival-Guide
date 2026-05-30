@@ -87,6 +87,36 @@ export default async function EpisodeDetail({
           {episode.season}
         </p>
 
+        <div className="flex gap-3 mt-4 flex-wrap">
+          
+          <span
+            className="
+            px-4
+            py-2
+            rounded-full
+            bg-[#F7CAC9]/20
+            text-[#F7CAC9]
+            text-sm
+            "
+            >
+              📺 {episode.series}
+          </span>
+          
+          <span
+            className="
+            px-4
+            py-2
+            rounded-full
+            bg-[#91A8D0]/20
+            text-[#91A8D0]
+            text-sm
+            "
+            >
+            📅 {episode.year}
+          </span>
+
+        </div>
+
         <p className="mt-6 text-gray-300">
           {episode.description}
         </p>

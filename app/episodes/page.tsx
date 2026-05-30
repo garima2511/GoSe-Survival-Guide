@@ -128,25 +128,25 @@ export default function EpisodesPage() {
         🔎 Explore GoSe Episodes
       </h1>
 
-      <p className="text-center text-gray-400 mt-4">
+      <p className="text-center text-gray-400 mt-2">
         Welcome to betrayal, games and suspicious behavior 😭
       </p>
 
       {/* Genre Section */}
 
-      <section className="mt-16 text-center">
+      <section className="mt-6 text-center">
         
         <h2 className="text-3xl font-bold text-[#91A8D0]">
           Choose your chaos type
         </h2>
         
-        <p className="text-gray-400 mt-3 italic">
+        <p className="text-gray-400 mt-1 italic">
           Different missions. Different emotional damage.
         </p>
 
         {/*Genre Tags*/}
         
-        <div className="mt-10 grid grid-cols-2 md:grid-cols-6 gap-4">
+        <div className="mt-4 grid grid-cols-2 md:grid-cols-6 gap-4 px-6 py-3">
           
           <button
           onClick={() => setSelectedGenre("All")}
@@ -194,7 +194,7 @@ export default function EpisodesPage() {
         
       </section>
 
-      <div className="mt-10 flex justify-center relative">
+      <div className="mt-4 flex justify-center relative">
         <div className="absolute left-[calc(50%-190px)] top-1/2 -translate-y-1/2 text-gray-500">
           🔍
         </div>
@@ -238,15 +238,15 @@ export default function EpisodesPage() {
 
       </div>
 
-      <p className="text-center mt-8 text-gray-400">
+      <p className="text-center mt-4 text-gray-400">
         Showing {filteredEpisodes.length} survival missions
       </p>
 
-      <p className="text-center mt-3 text-[#F7CAC9] italic">
+      <p className="text-center mt-2 text-[#F7CAC9] italic">
         Currently viewing: {selectedGenre}
       </p>
 
-      <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="mt-7 grid grid-cols-2 md:grid-cols-4 gap-4">
         
         <div className="rounded-2xl bg-[#11111a]/80 p-5 border border-[#F7CAC9]/20">
         
@@ -288,7 +288,7 @@ export default function EpisodesPage() {
 
       {filteredEpisodes.length === 0 ? (
         
-        <div className="text-center mt-20">
+        <div className="text-center mt-14">
           
           <h2 className="text-3xl text-[#F7CAC9]">
             No survival missions found 😭
@@ -302,7 +302,7 @@ export default function EpisodesPage() {
 
       ) : (
 
-      <div className="mt-20 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         
         {filteredEpisodes.map((episode) => (
           
