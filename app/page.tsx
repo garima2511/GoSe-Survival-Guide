@@ -180,7 +180,7 @@ export default function Home() {
 
       </div>
 
-      <section className="mt-20 text-center">
+      <section className="mt-14 text-center">
         
         <div className="relative inline-block">
           
