@@ -1,6 +1,7 @@
 export const episodes = [
   {
     id: 1,
+    order: 1,
     title: "Don't Lie I",
     year: "2019",
     episodeNo: "EP 21-22",
@@ -11,8 +12,7 @@ export const episodes = [
     emoji: "🕵️",
     survivalNote:
       "Trust nobody. Not even the person who looks innocent.",
-    youtube: "https://www.youtube.com/watch?v=7-RbcrWTth4",
-    videoId: "7-RbcrWTth4",
+    youtube: "https://www.youtube.com/watch?v=OqTI0KYkeJQ",
     difficulty: "★★★★★",
 
     season: "GoSe 2019",
@@ -21,6 +21,23 @@ export const episodes = [
 
   {
     id: 2,
+    order: 2,
+    title: "Don't Lie II",
+    year: "2020",
+    episodeNo: "EP 40-41",
+    series: "Don't Lie",
+    category: "Strategy",
+    description: "The mafia returns. Trust issues intensify.",
+    emoji: "🕵️‍♂️",
+    youtube: "https://www.youtube.com/watch?v=7-RbcrWTth4&t=1s",
+    difficulty: "★★★★★",
+    season: "GoSe 2020",
+    tags: ["Mafia", "Mind Games", "Betrayal", "Strategy"],
+  },
+
+  {
+    id: 3,
+    order: 1,
     title: "TTT Hyperrealism",
     year: "2020",
     episodeNo: "EP 44-45",
@@ -32,7 +49,6 @@ export const episodes = [
     survivalNote:
       "Looks like healing. Ends with chaos.",
     youtube: "https://www.youtube.com/watch?v=OjbjlNbQqLc",
-    videoId: "OjbjlNbQqLc",
     difficulty: "★★☆☆☆",
 
     season: "GoSe 2020",
@@ -40,7 +56,8 @@ export const episodes = [
   },
 
   {
-    id: 3,
+    id: 4,
+    order: 1,
     title: "Debate Night",
     year: "2020",
     episodeNo: "EP 28-29",
@@ -52,7 +69,6 @@ export const episodes = [
     survivalNote:
       "Logic may disappear without warning.",
     youtube: "https://www.youtube.com/watch?v=PwsatXwPonc",
-    videoId: "PwsatXwPonc",
     difficulty: "★★★★☆",
 
     season: "GoSe 2020",
@@ -60,7 +76,8 @@ export const episodes = [
   },
 
   {
-    id: 4,
+    id: 5,
+    order: 1,
     title: "The Tag",
     year: "2019",
     episodeNo: "EP 27-28",
@@ -72,7 +89,6 @@ export const episodes = [
     survivalNote:
       "Prepare headphones and emotional support.",
     youtube: "https://www.youtube.com/watch?v=zKa-EGTpkRI",
-    videoId: "zKa-EGTpkRI",
     difficulty: "☠️☠️☠️",
 
     season: "GoSe 2019",
@@ -80,7 +96,8 @@ export const episodes = [
   },
 
   {
-    id: 5,
+    id: 6,
+    order: 1,
     title: "Kickball",
     year: "2022",
     episodeNo: "EP 48-49",
@@ -91,7 +108,6 @@ export const episodes = [
     emoji: "⚽",
     survivalNote:
       "Athletes were created. Dignity was lost.",
-    videoId: "c4eNr-9So5A",
     youtube: "https://www.youtube.com/watch?v=c4eNr-9So5A",
     difficulty: "★★★☆☆",
 

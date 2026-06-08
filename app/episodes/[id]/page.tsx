@@ -32,19 +32,43 @@ export default async function EpisodeDetail({
     );
   }
 
+  const getYoutubeId = (url: string) => {
+    try {
+      const u = new URL(url);
+
+      // youtu.be/VIDEO_ID
+      if (u.hostname.includes("youtu.be")) {
+        return u.pathname.slice(1);
+      }
+
+      // youtube.com/watch?v=VIDEO_ID
+      return u.searchParams.get("v") || "";
+    } catch {
+      return "";
+    }
+  };
+
   const relatedEpisodes = episodes.filter(
     (ep) =>
       ep.series === episode.series &&
       ep.id !== episode.id
   );
 
-  const previousEpisode = episodes.find(
-    (ep) => ep.id === episode.id - 1
+  const sameSeriesEpisodes = episodes
+    .filter((ep) => ep.series === episode?.series)
+    .sort((a, b) => a.order - b.order);
+
+  const currentIndex = sameSeriesEpisodes.findIndex(
+    (ep) => ep.id === episode?.id
   );
 
-  const nextEpisode = episodes.find(
-    (ep) => ep.id === episode.id + 1
-  );
+  const previousEpisode =
+    currentIndex > 0 ? sameSeriesEpisodes[currentIndex - 1] : null;
+
+  const nextEpisode =
+    currentIndex < sameSeriesEpisodes.length - 1
+      ? sameSeriesEpisodes[currentIndex + 1]
+      : null;
 
   return (
     <main
@@ -66,16 +90,18 @@ export default async function EpisodeDetail({
         ← Back to Archive
       </Link>
 
-      <img
-        src={`https://img.youtube.com/vi/${episode.videoId}/hqdefault.jpg`}
-        alt={episode.title}
-        className="
-        w-full
-        max-w-3xl
-        rounded-[30px]
-        mx-auto
-        "
-      />
+      <div className="max-w-3xl mx-auto overflow-hidden rounded-3xl">
+        <img
+          src={`https://img.youtube.com/vi/${getYoutubeId(episode.youtube)}/hqdefault.jpg`}
+          alt= {episode.title}
+          className="
+          w-full
+          aspect-video
+          object-cover
+          rounded-3xl
+          "
+        />
+      </div>
 
       <div className="max-w-3xl mx-auto mt-10">
 

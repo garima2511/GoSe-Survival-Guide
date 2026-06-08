@@ -22,6 +22,20 @@ export default function EpisodesPage() {
     return matchesGenre && matchesSearch;
   });
 
+  const getYoutubeId = (url: string) => {
+    try {
+      const u = new URL(url);
+
+      if (u.hostname.includes("youtu.be")) {
+        return u.pathname.slice(1);
+      }
+
+      return u.searchParams.get("v") || "";
+    } catch {
+      return "";
+    }
+  };
+
   return (
     <main
     className="
@@ -329,7 +343,7 @@ export default function EpisodesPage() {
               <div className="overflow-hidden rounded-2xl">
                 
                 <img
-                  src={`https://img.youtube.com/vi/${episode.videoId}/hqdefault.jpg`}
+                  src={`https://img.youtube.com/vi/${getYoutubeId(episode.youtube)}/hqdefault.jpg`}
                   alt={episode.title}
                   className="
                   w-full
