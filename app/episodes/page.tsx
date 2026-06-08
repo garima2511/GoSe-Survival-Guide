@@ -12,7 +12,7 @@ export default function EpisodesPage() {
   const filteredEpisodes = episodes.filter((episode) => {
   const matchesGenre =
     selectedGenre === "All" ||
-    episode.category === selectedGenre;
+    episode.category.toLowerCase() === selectedGenre.toLowerCase()
 
   const matchesSearch =
     episode.title
@@ -260,48 +260,6 @@ export default function EpisodesPage() {
             Currently viewing: {selectedGenre}
           </p>
 
-          <div className="mt-7 grid grid-cols-2 md:grid-cols-4 gap-4">
-        
-            <div className="rounded-2xl bg-[#11111a]/80 p-5 border border-[#F7CAC9]/20">
-        
-            <p className="text-gray-400 text-sm">Total Episodes</p>
-        
-            <h3 className="text-3xl font-bold text-[#F7CAC9]">
-              {episodes.length}
-            </h3>
-            </div>
-        
-            <div className="rounded-2xl bg-[#11111a]/80 p-5 border border-red-400/20">
-        
-              <p className="text-gray-400 text-sm">Chaos Level</p>
-        
-              <h3 className="text-3xl font-bold text-red-300">
-                ∞
-              </h3>
-            </div>
-
-            <div className="rounded-2xl bg-[#11111a]/80 p-5 border border-[#91A8D0]/20">
-        
-              <p className="text-gray-400 text-sm">Current Filter</p>
-            
-              <h3 className="text-2xl font-bold text-[#91A8D0]">
-                {selectedGenre}
-              </h3>
-            
-            </div>
-
-            <div className="rounded-2xl bg-[#11111a]/80 p-5 border border-green-400/20">
-    
-              <p className="text-gray-400 text-sm">Survival Missions</p>
-    
-              <h3 className="text-3xl font-bold text-green-300">
-                {filteredEpisodes.length}
-              </h3>
-            
-            </div>
-
-          </div>
-
           {filteredEpisodes.length === 0 ? (
         
             <div className="text-center mt-14">
@@ -329,15 +287,18 @@ export default function EpisodesPage() {
             
             <div
               className="
+              group
               rounded-[30px]
               p-6
               bg-[#11111a]/80
               border border-[#91A8D0]/20
-              hover:scale-105
-              hover:border-[#91A8D0]
-              hover:shadow-[0_0_30px_rgba(145,168,208,0.25)]
-              transition
-              duration-300
+              hover:border-[#F7CAC9]
+              hover:shadow-[0_0_25px_rgba(247,202,201,0.25)]
+              hover:scale-[1.03]
+              hover:-translate-y-1
+              transition-all
+              duration-300  
+              ease-out
               "
             >
               <div className="overflow-hidden rounded-2xl">
@@ -349,9 +310,9 @@ export default function EpisodesPage() {
                   w-full
                   h-48
                   object-cover
-                  hover:scale-110
-                  transition
+                  transition-transform
                   duration-500
+                  group-hover:scale-110
                   "
                   />
               </div>
