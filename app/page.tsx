@@ -134,20 +134,20 @@ export default function Home() {
           </p>
 
           <p className="mt-5 text-lg">
-            This guide cannot protect you from:
+            This guide cannot protect you from :
           </p>
 
           <ul className="mt-6 space-y-5 text-lg">
 
-            <li> Unexpected betrayal</li>
+            <li> ➡️ Unexpected betrayal.</li>
 
-            <li> Suspicious game behavior</li>
+            <li> ➡️ Suspicious game behavior.</li>
 
-            <li> Loud screaming</li>
+            <li> ➡️ Loud screaming.</li>
 
-            <li> Secondhand embarrassment</li>
+            <li> ➡️ Secondhand embarrassment.</li>
 
-            <li> Emotional attachment</li>
+            <li> ➡️ Emotional attachment.</li>
 
           </ul>
 
