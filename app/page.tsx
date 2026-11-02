@@ -139,15 +139,15 @@ export default function Home() {
 
           <ul className="mt-6 space-y-5 text-lg">
 
-            <li>💎 unexpected betrayal</li>
+            <li> Unexpected betrayal</li>
 
-            <li>🎮 suspicious game behavior</li>
+            <li> Suspicious game behavior</li>
 
-            <li>🎤 loud screaming</li>
+            <li> Loud screaming</li>
 
-            <li>🎬 secondhand embarrassment</li>
+            <li> Secondhand embarrassment</li>
 
-            <li>💗 emotional attachment</li>
+            <li> Emotional attachment</li>
 
           </ul>
 
